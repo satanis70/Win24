@@ -1,23 +1,23 @@
 package com.example.win24
 
-import android.content.Intent
+import android.content.Context
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.SimpleTarget
 import com.bumptech.glide.request.transition.Transition
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_splash_screen.*
+import kotlinx.android.synthetic.main.activity_game.*
+import kotlinx.android.synthetic.main.activity_result.*
 
-class MainActivity : AppCompatActivity() {
+class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_result)
         setBackgroundImage()
-        button_start.setOnClickListener {
-            startActivity(Intent(this, GameActivity::class.java))
-        }
+        val sharedPreference = this.getSharedPreferences("score", Context.MODE_PRIVATE)
+        val score = sharedPreference.getString("score","")
+        textView_score.text = score
     }
 
     private fun setBackgroundImage(){
@@ -26,11 +26,9 @@ class MainActivity : AppCompatActivity() {
                 override fun onResourceReady(
                     resource: Drawable,
                     transition: Transition<in Drawable?>?
-                ) {
-                    main_constraint.background = resource
+                ){
+                    result_constraint.background = resource
                 }
             })
     }
-
-
 }

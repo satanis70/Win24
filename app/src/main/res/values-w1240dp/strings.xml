@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="start">Start</string>
+    <string name="ongratulations_you_score">Сongratulations, you score:</string>
+    <string name="start_over">Start over</string>
 </resources>
