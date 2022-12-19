@@ -1,6 +1,7 @@
 package com.example.win24
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -17,7 +18,12 @@ class ResultActivity : AppCompatActivity() {
         setBackgroundImage()
         val sharedPreference = this.getSharedPreferences("score", Context.MODE_PRIVATE)
         val score = sharedPreference.getString("score","")
-        textView_score.text = score
+        val size = sharedPreference.getString("size", "")
+        textView_score.text = "$score/$size"
+        button_startOver.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
     }
 
     private fun setBackgroundImage(){

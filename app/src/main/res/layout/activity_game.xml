@@ -27,7 +27,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="88dp"
         android:background="@drawable/round_button"
-        android:text="Answer1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_question" />
@@ -38,7 +37,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:background="@drawable/round_button"
-        android:text="Answer2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_answer1" />
@@ -49,7 +47,6 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button"
         android:layout_marginTop="36dp"
-        android:text="Answer3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_answer2" />

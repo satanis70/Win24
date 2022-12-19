@@ -35,8 +35,10 @@ class GameActivity : AppCompatActivity() {
                 val sharedPrefCapital = this.getSharedPreferences("score", Context.MODE_PRIVATE)
                 sharedPrefCapital.edit {
                     putString("score", correctAnswer.toString())
+                    putString("size", arrayListQuestions[0].quizsport.size.toString())
                 }
                 startActivity(Intent(this, ResultActivity::class.java))
+                finish()
             } else {
                 getQuestionList(position)
             }
